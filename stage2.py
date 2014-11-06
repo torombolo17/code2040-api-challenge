@@ -12,7 +12,7 @@ from urllib2 import urlopen, Request
 # this is my token, a dictionary that has the key(token) and value(... the tokens value)
 info = {'token':'haTzzCr65h'}
 
-# req will have the JSON that haves the string i need to reverse
+# now lets POST out token(using Request)
 req = Request('http://challenge.code2040.org/api/haystack', data=dumps(info))
 
 # lets get the dictionary out of what we recieved

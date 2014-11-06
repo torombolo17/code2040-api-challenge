@@ -25,7 +25,6 @@ req = Request('http://challenge.code2040.org/api/getstring', token)
 string = loads(urlopen(req).read())['result']
 
 # I'll print the string just for fun :)
-
 print "This is the string: " + string
 
 # now that we have the string we can create a variable to hold the 
@@ -34,7 +33,6 @@ print "This is the string: " + string
 gnirts = string[::-1]
 
 # now lets print gnirts
-
 print "This is the reversed string: " + gnirts
 
 # now we have to create a new dictionary to contain two pairs of key/value
@@ -48,10 +46,8 @@ send = {'token':'haTzzCr65h', 'string':gnirts}
 
 res = Request('http://challenge.code2040.org/api/validatestring', data=dumps(send)) 
 
-# now result has a JSON and we already know hot to get the string from this
-
+# now res has a JSON and we already know hot to get the string from this
 final = loads(urlopen(res).read())['result']
 
 # finally lets print the final variable and check if we passed the stage 1
-
 print final
